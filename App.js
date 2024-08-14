@@ -23,7 +23,7 @@ db.once('open', () => {
 
 
 const corsOptions = {
-  origin: 'https://kanban-app-frontent.onrender.com/',
+  origin: 'https://kanban-app-frontent.onrender.com',
   credentials: true, 
 };
 
