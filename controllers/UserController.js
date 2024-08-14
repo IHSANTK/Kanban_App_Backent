@@ -2,13 +2,13 @@ const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
-const JWT_SECRET = 'kanban'; 
+const JWT_SECRET =  process.env.JWT__SECRET; 
 
 exports.createUser = async (req, res) => {
 
 
   console.log("created");
-  try {
+  try { 
     const { name, email, password } = req.body;
     if (!name || !email || !password) {
       return res.status(400).json({ message: 'All fields are required' });
